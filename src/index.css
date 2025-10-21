@@ -24,11 +24,14 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  display: block; /* ✅ removed flex layout */
+  background-color: #ffffff;
+  color: #213547;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -71,3 +74,7 @@ button:focus-visible {
   --accent: #06B6D4;
 }
 html,body,#root{height:100%}
+/* Prevent unwanted horizontal scroll on any page */
+html, body {
+  overflow-x: hidden;
+}

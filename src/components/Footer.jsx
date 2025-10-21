@@ -30,8 +30,8 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-3">Contact</h4>
-            <p className="text-sm">Email: hello@hussainiit.com</p>
-            <p className="text-sm">Phone: +91-XXXXXXXXXX</p>
+            <p className="text-sm">Email: Hussainiitservices@gmail.com</p>
+            <p className="text-sm">Phone: +91-7024951915, +91-9156770832</p>
             <div className="mt-4 flex items-center gap-3">
               <a aria-label="Twitter" href="#" className="text-gray-600 hover:text-blue-500 transition">
                 <FaTwitter className="w-5 h-5" />

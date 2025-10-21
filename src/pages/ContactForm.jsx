@@ -1,148 +1,171 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod"; // ✅ Correct import path
-import { z } from "zod";
-import { Loader2, CheckCircle } from "lucide-react";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
-
-export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(contactSchema),
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (data) => {
-    setIsSubmitting(true);
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzjD2FWL5MH2SRaChjG4grWroUF_3HiFvXxjCvNbepoEOZzEE3-5uCLAD61OdA_2KTsHg/exec";
 
-    try {
-      // Replace with your Google Script URL or backend endpoint
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
 
-      const result = await response.json();
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
+          body: JSON.stringify(formData),
+        });
 
-      if (result.success) {
-        setIsSuccess(true);
-        reset();
-        setTimeout(() => setIsSuccess(false), 3000);
-      } else {
-        alert(result.message || "Failed to send message. Please try again.");
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({ name: "", email: "", message: "" });
+        } 
+      } catch (error) {
+        console.error("Error!", error.message);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      alert("Error sending message. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
+
 
   return (
-    <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-xl p-8 mt-10 border border-gray-100">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">
-        Contact Us
-      </h2>
+    <div className="bg-gradient-to-br from-gray-50 to-blue-100 text-gray-800 overflow-x-hidden w-full">
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-        {/* Name */}
-        <div>
-          <label className="block text-sm font-medium mb-2 text-gray-700">
-            Name
-          </label>
-          <input
-            {...register("name")}
-            placeholder="Your name"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.name && (
-            <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
-          )}
-        </div>
-
-        {/* Email */}
-        <div>
-          <label className="block text-sm font-medium mb-2 text-gray-700">
-            Email
-          </label>
-          <input
-            {...register("email")}
-            type="email"
-            placeholder="your.email@example.com"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-          )}
-        </div>
-
-        {/* Subject */}
-        <div>
-          <label className="block text-sm font-medium mb-2 text-gray-700">
-            Subject
-          </label>
-          <input
-            {...register("subject")}
-            placeholder="What is this about?"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.subject && (
-            <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-          )}
-        </div>
-
-        {/* Message */}
-        <div>
-          <label className="block text-sm font-medium mb-2 text-gray-700">
-            Message
-          </label>
-          <textarea
-            {...register("message")}
-            placeholder="Tell us more about your project..."
-            rows="5"
-            className="w-full border border-gray-300 rounded-lg p-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          ></textarea>
-          {errors.message && (
-            <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
-          )}
-        </div>
-
-        {/* Button */}
-        <button
-          type="submit"
-          disabled={isSubmitting || isSuccess}
-          className={`w-full flex items-center justify-center bg-blue-600 text-white py-3 rounded-lg transition-all duration-200 hover:bg-blue-700 ${
-            isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-          }`}
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 text-center px-4 md:px-8">
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-extrabold mb-4"
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="animate-spin mr-2 h-5 w-5" /> Sending...
-            </>
-          ) : isSuccess ? (
-            <>
-              <CheckCircle className="mr-2 h-5 w-5" /> Message Sent!
-            </>
+          Contact Us
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-lg max-w-2xl mx-auto"
+        >
+          Have a question or a project in mind? Let’s connect and make it happen.
+        </motion.p>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 px-6 md:px-20 grid md:grid-cols-2 gap-12 w-full overflow-hidden">
+        {/* Contact Form */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="bg-white p-8 rounded-2xl shadow-lg w-full"
+        >
+          <h2 className="text-2xl font-bold text-blue-700 mb-6">Send Us a Message</h2>
+
+          {!submitted ? (
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label className="block text-sm font-semibold mb-2">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-semibold mb-2">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label className="block text-sm font-semibold mb-2">Message</label>
+                <textarea
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  className="w-full border rounded-lg px-4 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  placeholder="Write your message..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </form>
           ) : (
-            "Send Message"
+            <div className="text-center py-10">
+              <h3 className="text-2xl font-bold text-green-600 mb-2">
+                Message Sent Successfully ✅
+              </h3>
+              <p>We’ll get back to you shortly.</p>
+            </div>
           )}
-        </button>
-      </form>
+        </motion.div>
+
+        {/* Company Info */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col justify-center w-full"
+        >
+          <h2 className="text-2xl font-bold text-blue-700 mb-6">Our Office</h2>
+
+          <p className="text-gray-700 mb-4">
+            <strong>Address:</strong> Ujjain , Madhya-Pradesh India - 456006
+          </p>
+          <p className="text-gray-700 mb-4">
+            <strong>Email:</strong> Hussainiitservices@gmail.com
+          </p>
+          <p className="text-gray-700 mb-4">
+            <strong>Phone:</strong> +91-7024951915, +91-9156770832
+          </p>
+
+          <div className="mt-6 overflow-hidden rounded-lg shadow-md">
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps?q=Surat,Gujarat,India&output=embed"
+              className="w-full h-[300px] border-0"
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
-}
+};
+
+export default Contact;

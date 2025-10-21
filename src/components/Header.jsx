@@ -31,8 +31,8 @@ export default function Header() {
             <a href="/about" className="text-gray-700 hover:text-gray-900 transition">About</a>
             <a href="/contact" className="text-gray-700 hover:text-gray-900 transition">Contact</a>
             <a
-              href="#contact"
-              className="ml-2 inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:scale-105 transform transition"
+              href="/contact"
+              className="ml-2 inline-flex items-center px-4 py-2 bg-blue-600 text-black rounded-lg shadow hover:scale-105 transform transition"
             >
               Get Quote
             </a>
