@@ -10,30 +10,36 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzjD2FWL5MH2SRaChjG4grWroUF_3HiFvXxjCvNbepoEOZzEE3-5uCLAD61OdA_2KTsHg/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw18ik6nfC68iQ43lgyniQ0Jk-imo6Kb2smBvI966EmV7aAyvgWWeWBDinCKQNOF3AZLg/exec";
 
       const handleSubmit = async (e) => {
-      e.preventDefault();
-      setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-      try {
-        const response = await fetch(scriptURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          mode: "no-cors",
-          body: JSON.stringify(formData),
-        });
+  try {
+    // Using FormData for better compatibility with no-cors
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('message', formData.message);
 
-        if (response.ok) {
-          setSubmitted(true);
-          setFormData({ name: "", email: "", message: "" });
-        } 
-      } catch (error) {
-        console.error("Error!", error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    await fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formDataToSend,
+    });
+
+    // With no-cors, we assume success
+    setSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+    
+  } catch (error) {
+    console.error("Error!", error.message);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
 
 
   return (
