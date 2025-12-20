@@ -11,20 +11,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@hussainiit.com",
+    content: "hussainiitservices@gmail.com",
     description: "We respond within 24 hours",
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (555) 123-4567",
+    content: "+91 7024951915 / +91 9156770832",
     description: "Mon-Fri, 9am-6pm EST",
   },
   {
     icon: MapPin,
     title: "Location",
-    content: "Global Service",
-    description: "Remote-first, serving worldwide",
+    content: "Ujjain,",
+    description: "Madhya Pradesh, India",
   },
   {
     icon: Clock,
@@ -123,7 +123,7 @@ const Contact = () => {
                       <Input
                         id="name"
                         name="name"
-                        placeholder="John Smith"
+                        placeholder="Your Name"
                         required
                         className="h-12"
                       />
@@ -134,7 +134,7 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@company.com"
+                        placeholder="Your Email"
                         required
                         className="h-12"
                       />

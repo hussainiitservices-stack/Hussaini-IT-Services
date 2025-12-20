@@ -60,7 +60,7 @@ export const HeroSection = () => {
             <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/10 opacity-0 animate-fade-up animation-delay-400">
               <div className="text-center lg:text-left">
                 <div className="font-heading text-4xl font-semibold text-gold-light">
-                  150+
+                  5+
                 </div>
                 <div className="text-sm text-primary-foreground/60 mt-1">
                   Projects Delivered
@@ -68,7 +68,7 @@ export const HeroSection = () => {
               </div>
               <div className="text-center lg:text-left">
                 <div className="font-heading text-4xl font-semibold text-gold-light">
-                  50+
+                  15+
                 </div>
                 <div className="text-sm text-primary-foreground/60 mt-1">
                   Global Clients
@@ -76,7 +76,7 @@ export const HeroSection = () => {
               </div>
               <div className="text-center lg:text-left">
                 <div className="font-heading text-4xl font-semibold text-gold-light">
-                  8+
+                  1+
                 </div>
                 <div className="text-sm text-primary-foreground/60 mt-1">
                   Years Experience

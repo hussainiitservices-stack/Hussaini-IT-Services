@@ -102,20 +102,21 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-gold mt-0.5" />
                 <span className="body-regular text-primary-foreground/70">
-                  hello@hussainiit.com
+                  hussainiitservices@gmail.com
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-gold mt-0.5" />
                 <span className="body-regular text-primary-foreground/70">
-                  +1 (555) 123-4567
+                  +91 7024951915 /
+                  +91 9156770832
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-0.5" />
                 <span className="body-regular text-primary-foreground/70">
-                  Global Service, <br />
-                  Remote First
+                  Ujjain, <br />
+                  Madhya Pradesh, India
                 </span>
               </li>
             </ul>

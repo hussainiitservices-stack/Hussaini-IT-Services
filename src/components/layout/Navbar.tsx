@@ -43,10 +43,16 @@ export const Navbar = () => {
             <img
               src="/Logo.png"
               alt="Hussaini IT Logo"
-              className={`h-8 w-auto transition-all duration-300 ${
-                showDarkNav ? "opacity-100" : "opacity-90"
-              }`}
-            />
+              className={`
+                          h-36          
+                          w-auto        
+                          transition-all duration-300
+                        ${
+                        showDarkNav ? "opacity-100" : "opacity-90"
+                        }
+  `                     }
+/>
+
 
             {/* Text Logo (can be removed later if needed) */}
             {/* <span

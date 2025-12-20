@@ -87,7 +87,7 @@ export const WhyChooseUs = () => {
                 </div>
                 <div className="text-center p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
                   <div className="font-heading text-5xl font-bold text-gold-light mb-2">
-                    150+
+                    5+
                   </div>
                   <div className="text-sm text-primary-foreground/70">
                     Projects Completed
@@ -95,7 +95,7 @@ export const WhyChooseUs = () => {
                 </div>
                 <div className="text-center p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
                   <div className="font-heading text-5xl font-bold text-gold-light mb-2">
-                    25+
+                    2+
                   </div>
                   <div className="text-sm text-primary-foreground/70">
                     Countries Served

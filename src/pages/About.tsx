@@ -29,11 +29,12 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2016", event: "Founded with a vision to deliver premium IT solutions" },
-  { year: "2018", event: "Expanded to serve international clients across 10+ countries" },
-  { year: "2020", event: "Launched mobile development division" },
-  { year: "2022", event: "Reached 100+ successful project deliveries" },
-  { year: "2024", event: "Grew team to 50+ specialists worldwide" },
+  // { year: "2016", event: "Founded with a vision to deliver premium IT solutions" },
+  // { year: "2018", event: "Expanded to serve international clients across 10+ countries" },
+  // { year: "2020", event: "Launched mobile development division" },
+  // { year: "2022", event: "Reached 100+ successful project deliveries" },
+  { year: "2024", event: "Born from a vision to take small businesses digital—and grow together through innovation." },
+  { year: "2025", event: "By 2025, we proudly delivered 5 major full-stack projects and industry-leading SEO strategies that fueled measurable business growth for our clients." },
 ];
 
 const About = () => {
@@ -49,7 +50,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <span className="label-text text-gold-light mb-4 block">About Us</span>
             <h1 className="heading-display text-primary-foreground mb-6">
-              Building Digital Excellence Since 2016
+              Building Digital Excellence Since 2024
             </h1>
             <p className="body-large text-primary-foreground/70 max-w-2xl mx-auto">
               We are a team of passionate technologists, designers, and strategists
