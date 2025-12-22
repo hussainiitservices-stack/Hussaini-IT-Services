@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram } from "lucide-react";
 
 const footerLinks = {
   services: [
@@ -35,22 +35,28 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/hussaini-it-services/"
                 className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/hussaini_it_services/"
                 className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
               >
-                <Twitter className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://github.com/hussainiitservices-stack"
                 className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
               >
                 <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.link/aka7ls"
+                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
+              >
+                <Phone className="w-4 h-4" />
               </a>
             </div>
           </div>

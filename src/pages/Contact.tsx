@@ -34,25 +34,100 @@ const contactInfo = [
   },
 ];
 
+const APPSCRIPT_URL = "https://script.google.com/macros/s/AKfycbzDR81VzIw43HpJ4jtQc3XPnAptTyFgtGoR5p4HXYQqjlgYXqQn0zv8C9abAJyjE4Xd/exec";
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  const form = e.target as HTMLFormElement;
+  const formData = new FormData(form);
+
+  const name = String(formData.get("name") || "").trim();
+  const email = String(formData.get("email") || "").trim();
+  const contactNo = String(formData.get("contactNo") || "").trim();
+  const company = String(formData.get("company") || "").trim();
+  const service = String(formData.get("service") || "").trim();
+  const budget = String(formData.get("budget") || "").trim();
+  const message = String(formData.get("message") || "").trim();
+
+  // 🔐 VALIDATIONS
+  if (name.length < 3) {
+    toast({ title: "Invalid Name", description: "Please enter your full name." });
+    setIsSubmitting(false);
+    return;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    toast({ title: "Invalid Email", description: "Please enter a valid email address." });
+    setIsSubmitting(false);
+    return;
+  }
+
+  if (!/^[+\d\s]{10,}$/.test(contactNo)) {
+    toast({
+      title: "Invalid Contact Number",
+      description: "Enter a valid WhatsApp number with country code.",
+    });
+    setIsSubmitting(false);
+    return;
+  }
+
+  if (!service) {
+    toast({ title: "Service Required", description: "Please specify a service." });
+    setIsSubmitting(false);
+    return;
+  }
+
+  if (message.length < 10) {
+    toast({
+      title: "Message Too Short",
+      description: "Please describe your project briefly.",
+    });
+    setIsSubmitting(false);
+    return;
+  }
+
+  // ✅ FIXED PAYLOAD (CONTACT NO INCLUDED)
+  const payload = {
+    name,
+    email,
+    contactNo,
+    company,
+    service,
+    budget,
+    message,
+  };
+
+  try {
+    await fetch(APPSCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
 
     toast({
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
     });
 
+    form.reset();
+  } catch (error) {
+    toast({
+      title: "Something went wrong",
+      description: "Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
     setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-  };
+  }
+};
+
 
   return (
     <Layout>
@@ -117,6 +192,8 @@ const Contact = () => {
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* FORM UNCHANGED */}
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
@@ -160,6 +237,16 @@ const Contact = () => {
                         className="h-12"
                       />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="contactNo">Contact No (Whatsapp)</Label>
+                    <Input
+                      id="contactNo"
+                      name="contactNo"
+                      placeholder="e.g., +91 8888888888"
+                      className="h-12"
+                    />
                   </div>
 
                   <div className="space-y-2">
