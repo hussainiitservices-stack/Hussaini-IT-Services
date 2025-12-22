@@ -128,8 +128,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-in">
-          <div className="container-section py-6 flex flex-col gap-2">
+<div className="md:hidden bg-white border-t border-border animate-fade-in">
+<div className="container-section py-6 flex flex-col gap-2 bg-white">
             {navItems.map((item) => (
               <Link
                 key={item.path}

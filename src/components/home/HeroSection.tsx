@@ -15,8 +15,11 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if needed)
+    backgroundImage: `
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+    `,          backgroundSize: "60px 60px",
         }}
       />
 
