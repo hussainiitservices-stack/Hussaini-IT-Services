@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
 
 export const HeroSection = () => {
+
+  // ✅ Smooth scroll handler
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById("services");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-navy overflow-hidden">
       {/* Background Pattern */}
@@ -15,16 +24,14 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 opacity-5"
         style={{
-backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if needed)
-    backgroundImage: `
-      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-    `,          backgroundSize: "60px 60px",
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
         }}
       />
 
       <div className="container-section relative z-10 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 mb-8 opacity-0 animate-fade-up">
@@ -91,7 +98,6 @@ backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if nee
           {/* Visual Element */}
           <div className="hidden lg:block relative opacity-0 animate-fade-up animation-delay-300">
             <div className="relative">
-              {/* Main Card */}
               <div className="glass-card bg-primary-foreground/5 backdrop-blur-xl border-primary-foreground/10 p-8 rounded-2xl">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group">
@@ -103,6 +109,7 @@ backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if nee
                       Custom & scalable solutions
                     </p>
                   </div>
+
                   <div className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group">
                     <Smartphone className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
                     <h3 className="font-heading text-lg text-primary-foreground mb-2">
@@ -112,6 +119,7 @@ backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if nee
                       iOS & Android
                     </p>
                   </div>
+
                   <div className="col-span-2 p-6 rounded-xl bg-gold/10 border border-gold/30 hover:border-gold transition-colors duration-300 group">
                     <Globe className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
                     <h3 className="font-heading text-lg text-primary-foreground mb-2">
@@ -125,7 +133,6 @@ backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if nee
                 </div>
               </div>
 
-              {/* Floating Elements */}
               <div className="absolute -top-6 -right-6 w-20 h-20 rounded-2xl bg-gold/20 backdrop-blur-sm border border-gold/30 flex items-center justify-center animate-float">
                 <span className="font-heading text-2xl text-gold">✦</span>
               </div>
@@ -134,15 +141,19 @@ backgroundColor: "rgba(15, 23, 42, 0.98)", // match dark nav base (change if nee
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animation-delay-500">
+      {/* ✅ Clickable Scroll Indicator */}
+      <button
+        onClick={handleScrollDown}
+        aria-label="Scroll down"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animation-delay-500 cursor-pointer z-20"
+      >
         <span className="text-xs text-primary-foreground/50 uppercase tracking-widest">
           Scroll
         </span>
         <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex justify-center pt-2">
           <div className="w-1.5 h-3 rounded-full bg-gold animate-bounce" />
         </div>
-      </div>
+      </button>
     </section>
   );
 };
