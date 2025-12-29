@@ -55,7 +55,7 @@ const projects = [
   //   image: "bg-gradient-to-br from-red-900 to-rose-800",
   // },
   {
-    id: 6,
+    id: 4,
     title: "Safinat Safinaas - Ecom Web Application",
     category: "Webflow + Custom Code",
     description:
@@ -64,6 +64,16 @@ const projects = [
     technologies: ["Webflow", "Custom Code", "Product Analysing"],
     image: "bg-gradient-to-br from-slate-800 to-zinc-700",
   },
+  {
+    id: 5,
+    title: "crochet art - Portfolio Website",
+    category: "Web Development",
+    description:
+      "Portfolio website for a crochet artist, showcasing their work, blog, and an online store for handmade items.",
+    results: ["150% increase in online sales", "High-resolution image gallery", "Integrated blog"],
+    technologies: ["React", "Node", "GoogleSheets API"],
+    image: "bg-gradient-to-br from-pink-900 to-fuchsia-800",
+  }
 ];
 
 const Portfolio = () => {
