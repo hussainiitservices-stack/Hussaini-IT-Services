@@ -66,7 +66,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "crochet art - Portfolio Website",
+    title: "Crochet art - Portfolio Website",
     category: "Web Development",
     description:
       "Portfolio website for a crochet artist, showcasing their work, blog, and an online store for handmade items.",
