@@ -63,7 +63,8 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    // ✅ ID ADDED — THIS FIXES HERO SCROLL
+    <section id="services" className="py-24 lg:py-32 bg-background">
       <div className="container-section">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
