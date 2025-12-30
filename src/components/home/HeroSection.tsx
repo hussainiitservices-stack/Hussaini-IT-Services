@@ -96,7 +96,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Visual Element */}
-          <div className="hidden lg:block relative opacity-0 animate-fade-up animation-delay-300">
+          <div className="hidden lg:block relative opacity-0 animate-fade-up animation-delay-300 cursor-pointer">
             <div className="relative">
               <div className="glass-card bg-primary-foreground/5 backdrop-blur-xl border-primary-foreground/10 p-8 rounded-2xl">
                 <div className="grid grid-cols-2 gap-6">
