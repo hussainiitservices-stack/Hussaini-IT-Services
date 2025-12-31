@@ -12,9 +12,9 @@ const projects = [
       "Corporate website for an industrial metal coating company, featuring service descriptions, client testimonials, and a blog section.",
     results: ["Digital Growth", "99.9% uptime achieved", "100% SEO optimization"],
     technologies: ["React", "Node.js", "GoogleSheets API"],
-    image: "bg-gradient-to-br from-blue-900 to-indigo-800",
+    image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/hRR7GYb0/logo.png",
-    website: "https://www.alhadafmetalcoating.com/", // ← optional
+    website: "https://www.alhadafmetalcoating.com/",
   },
   {
     id: 2,
@@ -24,9 +24,8 @@ const projects = [
       "Custom web application for managing and tracking security personnel performance, attendance, and reporting.",
     results: ["Best App for tracking ", "3s average load time", "100% user satisfaction"],
     technologies: ["React", "Node.js", "MongoDB"],
-    image: "bg-gradient-to-br from-amber-900 to-orange-800",
+    image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/Rp8BZbJF/Logo.png",
-    // website: "https://example.com", // ← optional
   },
   {
     id: 3,
@@ -36,9 +35,8 @@ const projects = [
       "Ecommerce app for oilfield equipment and supplies, featuring product catalog, shopping cart, and secure checkout.",
     results: ["5 star rating", "30% increase in Customer engagement"],
     technologies: ["Shopify Plus", "Liquid", "Javascript"],
-    image: "bg-gradient-to-br from-emerald-900 to-teal-800",
+    image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/dwgHs75z/White-OILFIELD-EQUIPMENT-TRADING-Co-LLC.png",
-    // website: "https://example.com", // ← optional
   },
   {
     id: 4,
@@ -48,9 +46,8 @@ const projects = [
       "Ecommerce web application for a fashion retailer, featuring dynamic product listings, user reviews, and personalized recommendations.",
     results: ["2000+ products listed", "50% reduction in inquiry time", "Mobile-first design"],
     technologies: ["Webflow", "Custom Code", "Product Analysing"],
-    image: "bg-gradient-to-br from-slate-800 to-zinc-700",
+    image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
-    // website: "https://example.com", // ← optional
   },
   {
     id: 5,
@@ -60,28 +57,27 @@ const projects = [
       "Portfolio website for a crochet artist, showcasing their work, blog, and an online store for handmade items.",
     results: ["150% increase in online sales", "High-resolution image gallery", "Integrated blog"],
     technologies: ["React", "Node", "GoogleSheets API"],
-    image: "bg-gradient-to-br from-pink-900 to-fuchsia-800",
+    image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/7J2zSp4y/Whats-App-Image-2025-12-30-at-12-09-39-PM.jpg",
-    website: "https://knot-in-thread.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAPAXw1leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafZbFxIhrzWr2jmeXUJk61YB2FJgAjjuiXZjgFw_yuCeb-0wtv4raUx6zyQ1Q_aem_68mqwgcYopSwWS_7EiBk4w", // ← optional
+    website:
+      "https://knot-in-thread.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
   },
-
   {
-  id: 6,
-  title: "Business Expense & Inventory Tracker",
-  category: "Web Development",
-  description:
-    "A smart business expense tracker designed to monitor cash flow, manage inventory, and analyze financial performance using dynamic calculations and real-time data handling.",
-  results: [
-    "Accurate tracking of income & expenses",
-    "Automated inventory value calculations",
-    "Clear financial insights through dynamic reports"
-  ],
-  technologies: ["React", "Node.js", "Google Sheets API"],
-image: "bg-gradient-to-br from-orange-900 to-yellow-800",
-  logo: "https://i.ibb.co/YTypYT0q/favicon.png",
-  website: "https://namak-para.vercel.app/", // ← optional
-}
-
+    id: 6,
+    title: "Business Expense & Inventory Tracker",
+    category: "Web Development",
+    description:
+      "A smart business expense tracker designed to monitor cash flow, manage inventory, and analyze financial performance using dynamic calculations and real-time data handling.",
+    results: [
+      "Accurate tracking of income & expenses",
+      "Automated inventory value calculations",
+      "Clear financial insights through dynamic reports",
+    ],
+    technologies: ["React", "Node.js", "Google Sheets API"],
+    image: "bg-white/85 backdrop-blur-md",
+    logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+    website: "https://namak-para.vercel.app/",
+  },
 ];
 
 const Portfolio = () => {
@@ -121,41 +117,33 @@ const Portfolio = () => {
                   className={`aspect-video ${project.image} flex items-center justify-center relative overflow-hidden`}
                 >
                   <div className="relative group/logo">
-  {project.website ? (
-    <a
-      href={project.website}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="cursor-pointer"
-    >
-      <img
-        src={project.logo}
-        alt={`${project.title} logo`}
-        className="max-h-20 max-w-[180px] opacity-90 object-contain transition-all duration-500 ease-out
-                   group-hover:scale-110 group-hover:opacity-100"
-        loading="lazy"
-      />
+                    {project.website ? (
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer"
+                      >
+                        <img
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+className="max-h-53 max-w-[260px] opacity-90 object-contain transition-all duration-500 ease-out group-hover:scale-110 group-hover:opacity-100"
+                          loading="lazy"
+                        />
 
-      {/* Visit Website Icon */}
-      <div
-        className="absolute -bottom-6 left-1/2 -translate-x-1/2
-                   opacity-0 translate-y-2
-                   group-hover/logo:opacity-100 group-hover/logo:translate-y-0
-                   transition-all duration-300"
-      >
-        <ExternalLink className="w-5 h-5 text-white/90" />
-      </div>
-    </a>
-  ) : (
-    <img
-      src={project.logo}
-      alt={`${project.title} logo`}
-      className="max-h-20 max-w-[180px] opacity-60 object-contain cursor-not-allowed"
-      loading="lazy"
-    />
-  )}
-</div>
-
+                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 translate-y-2 group-hover/logo:opacity-100 group-hover/logo:translate-y-0 transition-all duration-300">
+                          <ExternalLink className="w-5 h-5 text-white/90" />
+                        </div>
+                      </a>
+                    ) : (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+className="max-h-53 max-w-[260px] opacity-60 object-contain cursor-not-allowed transition-all duration-300 ease-out hover:scale-105 hover:opacity-80"
+                        loading="lazy"
+                      />
+                    )}
+                  </div>
 
                   <div className="absolute top-4 right-4">
                     <span className="px-3 py-1 text-xs rounded-full bg-white/20 text-white backdrop-blur-sm">
@@ -173,26 +161,18 @@ const Portfolio = () => {
                     {project.description}
                   </p>
 
-                  {/* Results */}
                   <div className="space-y-2 mb-6">
                     {project.results.map((result) => (
-                      <div
-                        key={result}
-                        className="flex items-center gap-2 text-sm text-foreground"
-                      >
+                      <div key={result} className="flex items-center gap-2 text-sm text-foreground">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {result}
                       </div>
                     ))}
                   </div>
 
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 text-xs rounded bg-muted text-muted-foreground"
-                      >
+                      <span key={tech} className="px-2 py-1 text-xs rounded bg-muted text-muted-foreground">
                         {tech}
                       </span>
                     ))}
