@@ -29,46 +29,22 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        showDarkNav
-          ? "bg-background/95 backdrop-blur-md shadow-elegant-sm"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-elegant-sm"
     >
       <div className="container-section">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            {/* Logo Image Placeholder */}
             <img
               src="/Logo.png"
               alt="Hussaini IT Logo"
-              className={`
-                          h-36          
-                          w-auto        
-                          transition-all duration-300
-                        ${
-                        showDarkNav ? "opacity-100" : "opacity-90"
-                        }
-  `                     }
-/>
-
-
-            {/* Text Logo (can be removed later if needed) */}
-            {/* <span
-              className={`font-heading text-2xl font-semibold transition-colors duration-300 ${
-                showDarkNav ? "text-foreground" : "text-primary-foreground"
-              }`}
-            >
-              Hussaini
-            </span>
-            <span
-              className={`font-heading text-2xl font-semibold transition-colors duration-300 ${
-                showDarkNav ? "text-accent" : "text-gold-light"
-              }`}
-            >
-              IT
-            </span> */}
+              className="
+                h-36
+                w-auto
+                transition-all duration-300
+                opacity-100
+              "
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -76,14 +52,10 @@ export const Navbar = () => {
             {navItems.map((item) => (
               <Link key={item.path} to={item.path}>
                 <Button
-                  variant={showDarkNav ? "nav" : "nav-light"}
+                  variant="nav"
                   size="sm"
                   className={`relative ${
-                    location.pathname === item.path
-                      ? showDarkNav
-                        ? "text-accent"
-                        : "text-gold-light"
-                      : ""
+                    location.pathname === item.path ? "text-accent" : ""
                   }`}
                 >
                   {item.name}
@@ -98,7 +70,7 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/contact">
-              <Button variant={showDarkNav ? "gold" : "hero"} size="sm">
+              <Button variant="gold" size="sm">
                 Get Started
               </Button>
             </Link>
@@ -110,17 +82,9 @@ export const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X
-                className={`w-6 h-6 ${
-                  showDarkNav ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <X className="w-6 h-6 text-foreground" />
             ) : (
-              <Menu
-                className={`w-6 h-6 ${
-                  showDarkNav ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <Menu className="w-6 h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -128,8 +92,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-<div className="md:hidden bg-white border-t border-border animate-fade-in">
-<div className="container-section py-6 flex flex-col gap-2 bg-white">
+        <div className="md:hidden bg-white border-t border-border animate-fade-in">
+          <div className="container-section py-6 flex flex-col gap-2 bg-white">
             {navItems.map((item) => (
               <Link
                 key={item.path}
