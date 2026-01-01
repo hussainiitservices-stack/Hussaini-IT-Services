@@ -34,31 +34,47 @@ export const Footer = () => {
               startups worldwide. Your vision, our expertise.
             </p>
             <div className="flex gap-4">
-              <a
-                href="https://www.linkedin.com/company/hussaini-it-services/"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/hussaini_it_services/"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://github.com/hussainiitservices-stack"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href="https://wa.link/aka7ls"
-                className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-gold transition-all duration-300"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
-            </div>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/company/hussaini-it-services/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]"
+  >
+    <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/hussaini_it_services/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-pink-500/10 hover:border-pink-500"
+  >
+    <Instagram className="w-4 h-4 text-pink-500" />
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/hussainiitservices-stack"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-500/10 hover:border-gray-500"
+  >
+    <Github className="w-4 h-4 text-gray-500" />
+  </a>
+
+  {/* WhatsApp */}
+  <a
+    href="https://wa.link/aka7ls"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-green-500/10 hover:border-green-500"
+  >
+    <Phone className="w-4 h-4 text-green-500" />
+  </a>
+</div>
+
           </div>
 
           {/* Services */}
@@ -112,11 +128,13 @@ export const Footer = () => {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-gold mt-0.5" />
-                <span className="body-regular text-primary-foreground/70">
-                  +91 7024951915 /
-                  +91 9156770832
-                </span>
+                <Phone className="w-5 h-5 text-gold mt-1 shrink-0" />
+
+<ul className="body-regular text-primary-foreground/70 space-y-1">
+  <li>+91 7024951915</li>
+  <li>+91 9156770832</li>
+</ul>
+
               </li>
               {/* <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-0.5" />
