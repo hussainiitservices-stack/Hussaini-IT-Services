@@ -1,5 +1,134 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from "lucide-react";
+import { useState } from "react";
+
+
+/* =========================
+   CLIENT MARQUEE CONFIG
+========================= */
+const clientMarqueeSettings = {
+  speed: 380, // seconds (lower = faster)
+  direction: "left", // "left" | "right"
+  logoSize: 64, // px
+  gap: 48, // px
+};
+
+const clients = [
+  {
+    name: "",
+    logo: "https://i.ibb.co/hRR7GYb0/logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/Rp8BZbJF/Logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/dwgHs75z/White-OILFIELD-EQUIPMENT-TRADING-Co-LLC.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/7J2zSp4y/Whats-App-Image-2025-12-30-at-12-09-39-PM.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+  },
+/* ================================================================================================================================================== */
+  {
+    name: "",
+    logo: "https://i.ibb.co/hRR7GYb0/logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/Rp8BZbJF/Logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/dwgHs75z/White-OILFIELD-EQUIPMENT-TRADING-Co-LLC.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/7J2zSp4y/Whats-App-Image-2025-12-30-at-12-09-39-PM.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+  },
+/* ================================================================================================================================================== */
+  {
+    name: "",
+    logo: "https://i.ibb.co/hRR7GYb0/logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/Rp8BZbJF/Logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/dwgHs75z/White-OILFIELD-EQUIPMENT-TRADING-Co-LLC.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/7J2zSp4y/Whats-App-Image-2025-12-30-at-12-09-39-PM.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+  },
+/* ================================================================================================================================================== */
+  {
+    name: "",
+    logo: "https://i.ibb.co/hRR7GYb0/logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/Rp8BZbJF/Logo.png",
+  },
+  {
+    name: "",
+    logo: "https://i.ibb.co/dwgHs75z/White-OILFIELD-EQUIPMENT-TRADING-Co-LLC.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/7J2zSp4y/Whats-App-Image-2025-12-30-at-12-09-39-PM.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+  },
+/* ================================================================================================================================================== */
+];
+
+/* ========================= */
 
 const footerLinks = {
   services: [
@@ -17,6 +146,11 @@ const footerLinks = {
 };
 
 export const Footer = () => {
+  const [activeClient, setActiveClient] = useState<{
+    name?: string;
+    logo: string;
+  } | null>(null);
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
@@ -34,47 +168,19 @@ export const Footer = () => {
               startups worldwide. Your vision, our expertise.
             </p>
             <div className="flex gap-4">
-  {/* LinkedIn */}
-  <a
-    href="https://www.linkedin.com/company/hussaini-it-services/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]"
-  >
-    <Linkedin className="w-4 h-4 text-[#0A66C2]" />
-  </a>
-
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/hussaini_it_services/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-pink-500/10 hover:border-pink-500"
-  >
-    <Instagram className="w-4 h-4 text-pink-500" />
-  </a>
-
-  {/* GitHub */}
-  <a
-    href="https://github.com/hussainiitservices-stack"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-500/10 hover:border-gray-500"
-  >
-    <Github className="w-4 h-4 text-gray-500" />
-  </a>
-
-  {/* WhatsApp */}
-  <a
-    href="https://wa.link/aka7ls"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-green-500/10 hover:border-green-500"
-  >
-    <Phone className="w-4 h-4 text-green-500" />
-  </a>
-</div>
-
+              <a href="https://www.linkedin.com/company/hussaini-it-services/" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a href="https://www.instagram.com/hussaini_it_services/" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="https://github.com/hussainiitservices-stack" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
+                <Github className="w-4 h-4" />
+              </a>
+              <a href="https://wa.link/aka7ls" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
+                <Phone className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Services */}
@@ -85,10 +191,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="body-regular text-primary-foreground/70 hover:text-gold-light transition-colors duration-300"
-                  >
+                  <Link to={link.path} className="body-regular text-primary-foreground/70 hover:text-gold-light transition">
                     {link.name}
                   </Link>
                 </li>
@@ -104,10 +207,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="body-regular text-primary-foreground/70 hover:text-gold-light transition-colors duration-300"
-                  >
+                  <Link to={link.path} className="body-regular text-primary-foreground/70 hover:text-gold-light transition">
                     {link.name}
                   </Link>
                 </li>
@@ -115,62 +215,163 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-6 text-gold-light">
               Contact
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-gold mt-0.5" />
-                <span className="body-regular text-primary-foreground/70">
+              <li className="flex gap-3">
+                <Mail className="w-5 h-5 text-gold" />
+                <span className="text-primary-foreground/70">
                   hussainiitservices@gmail.com
                 </span>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-gold mt-1 shrink-0" />
 
 <ul className="body-regular text-primary-foreground/70 space-y-1">
   <li>+91 7024951915</li>
   <li>+91 9156770832</li>
 </ul>
-
               </li>
-              {/* <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold mt-0.5" />
-                <span className="body-regular text-primary-foreground/70">
-                  Ujjain, <br />
-                  Madhya Pradesh, India
-                </span>
-              </li> */}
+              
             </ul>
           </div>
         </div>
       </div>
 
+      {/* Client Served Marquee */}
+<div className="border-t border-primary-foreground/10 py-10 overflow-hidden">
+  <div style={{ width: "100%", overflow: "hidden" }}>
+    <div
+      style={{
+        display: "flex",
+        width: "max-content",
+        gap: clientMarqueeSettings.gap,
+        animation: `marquee ${clientMarqueeSettings.speed}s linear infinite`,
+        animationDirection:
+          clientMarqueeSettings.direction === "right" ? "reverse" : "normal",
+      }}
+      onMouseEnter={(e) =>
+        (e.currentTarget.style.animationPlayState = "paused")
+      }
+      onMouseLeave={(e) =>
+        (e.currentTarget.style.animationPlayState = "running")
+      }
+    >
+      {[...clients, ...clients].map((client, index) => (
+        <div
+          key={index}
+          onClick={() => setActiveClient(client)}
+          style={{
+            flex: "0 0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            minWidth: clientMarqueeSettings.logoSize + 40,
+          }}
+        >
+          <img
+            src={client.logo}
+            alt={client.name || "Client Logo"}
+            style={{
+              width: clientMarqueeSettings.logoSize,
+              height: clientMarqueeSettings.logoSize,
+              objectFit: "contain",
+              opacity: 0.85,
+              transition: "opacity 0.3s ease",
+            }}
+          />
+          {client.name && (
+            <span
+              style={{
+                marginTop: 6,
+                fontSize: 12,
+                opacity: 0.6,
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {client.name}
+            </span>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-section py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Hussaini IT Services. All rights
-            reserved.
+            © {new Date().getFullYear()} Hussaini IT Services. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link
-              to="/privacy"
-              className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors"
-            >
+            <Link to="/privacy" className="text-sm text-primary-foreground/50">
               Privacy Policy
             </Link>
-            <Link
-              to="/terms"
-              className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors"
-            >
+            <Link to="/terms" className="text-sm text-primary-foreground/50">
               Terms of Service
             </Link>
           </div>
         </div>
       </div>
+
+      {/* MODAL */}
+      {activeClient && (
+        <div
+          onClick={() => setActiveClient(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 50,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#111",
+              padding: 24,
+              borderRadius: 12,
+              textAlign: "center",
+              maxWidth: 320,
+              width: "100%",
+            }}
+          >
+            <img
+              src={activeClient.logo}
+              style={{ maxHeight: 140, margin: "0 auto 16px" }}
+            />
+            {activeClient.name && (
+              <h3 style={{ color: "#d4af37" }}>{activeClient.name}</h3>
+            )}
+          </div>
+        </div>
+      )}
+
+      <style>
+  {`
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  `}
+</style>
+
+
     </footer>
   );
 };
