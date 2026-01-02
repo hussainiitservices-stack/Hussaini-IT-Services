@@ -168,18 +168,46 @@ export const Footer = () => {
               startups worldwide. Your vision, our expertise.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/hussaini-it-services/" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="https://www.instagram.com/hussaini_it_services/" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="https://github.com/hussainiitservices-stack" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
-                <Github className="w-4 h-4" />
-              </a>
-              <a href="https://wa.link/aka7ls" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition">
-                <Phone className="w-4 h-4" />
-              </a>
+                {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/company/hussaini-it-services/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]"
+  >
+    <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/hussaini_it_services/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-pink-500/10 hover:border-pink-500"
+  >
+    <Instagram className="w-4 h-4 text-pink-500" />
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/hussainiitservices-stack"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-500/10 hover:border-gray-500"
+  >
+    <Github className="w-4 h-4 text-gray-500" />
+  </a>
+
+  {/* WhatsApp */}
+  <a
+    href="https://wa.link/aka7ls"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center transition-all duration-300 hover:bg-green-500/10 hover:border-green-500"
+  >
+    <Phone className="w-4 h-4 text-green-500" />
+  </a>
+
             </div>
           </div>
 
