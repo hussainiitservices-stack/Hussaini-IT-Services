@@ -35,7 +35,7 @@ const contactInfo = [
 ];
 
 const APPSCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzDR81VzIw43HpJ4jtQc3XPnAptTyFgtGoR5p4HXYQqjlgYXqQn0zv8C9abAJyjE4Xd/exec";
+  "https://script.google.com/macros/s/AKfycbxuiTg6waMewMZpePx5mlEFvCY-znrOPTTJU1nXgniB7cbqeCEwSRhiUqOWBoq8vuI/exec";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -68,11 +68,14 @@ const Contact = () => {
 
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
+    const phoneCode = String(formData.get("phoneCode") || "").trim();
     const contactNo = String(formData.get("contactNo") || "").trim();
     const company = String(formData.get("company") || "").trim();
     const service = String(formData.get("service") || "").trim();
     const budget = String(formData.get("budget") || "").trim();
     const message = String(formData.get("message") || "").trim();
+    const currency = String(formData.get("currency") || "INR");
+
 
     if (name.length < 3) {
       toast({ title: "Invalid Name", description: "Please enter your full name." });
@@ -86,14 +89,34 @@ const Contact = () => {
       return;
     }
 
-    if (!/^[+\d\s]{10,}$/.test(contactNo)) {
-      toast({
-        title: "Invalid Contact Number",
-        description: "Enter a valid WhatsApp number with country code.",
-      });
-      setIsSubmitting(false);
-      return;
-    }
+    if (!phoneCode) {
+  toast({
+    title: "Phone Code Required",
+    description: "Please select a country code.",
+  });
+  setIsSubmitting(false);
+  return;
+}
+
+if (!/^\d{6,15}$/.test(contactNo)) {
+  toast({
+    title: "Invalid Contact Number",
+    description: "Enter a valid WhatsApp number without country code.",
+  });
+  setIsSubmitting(false);
+  return;
+}
+
+
+    if (!currency) {
+  toast({
+    title: "Currency Required",
+    description: "Please select a currency for your budget.",
+  });
+  setIsSubmitting(false);
+  return;
+}
+
 
     if (!service) {
       toast({ title: "Service Required", description: "Please specify a service." });
@@ -113,10 +136,12 @@ const Contact = () => {
     const payload = {
       name,
       email,
+      phoneCode,
       contactNo,
       company,
       service,
       budget,
+      currency,
       message,
     };
 
@@ -257,24 +282,60 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="contactNo">Contact No (Whatsapp)</Label>
-                    <Input
-                      id="contactNo"
-                      name="contactNo"
-                      placeholder="e.g., +91 8888888888"
-                      className="h-12"
-                    />
-                  </div>
+  <Label htmlFor="contactNo">Contact No (WhatsApp)</Label>
+
+  <div className="flex gap-3">
+    {/* Phone Code Dropdown */}
+    <select
+      name="phoneCode"
+      className="h-12 w-28 rounded-md border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+      defaultValue="+91"
+    >
+      <option value="+91">🇮🇳 +91</option>
+      <option value="+1">🇺🇸 +1</option>
+      <option value="+44">🇬🇧 +44</option>
+      <option value="+971">🇦🇪 +971</option>
+      <option value="+61">🇦🇺 +61</option>
+    </select>
+
+    {/* Phone Number Input */}
+    <Input
+      id="contactNo"
+      name="contactNo"
+      placeholder="e.g., 8888888888"
+      className="h-12 flex-1"
+    />
+  </div>
+</div>
+
 
                   <div className="space-y-2">
-                    <Label htmlFor="budget">Budget Range</Label>
-                    <Input
-                      id="budget"
-                      name="budget"
-                      placeholder="e.g., $10,000 - $25,000"
-                      className="h-12"
-                    />
-                  </div>
+  <Label htmlFor="budget">Budget Range</Label>
+
+  <div className="flex gap-3">
+    {/* Currency Dropdown */}
+    <select
+      name="currency"
+      className="h-12 w-28 rounded-md border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+      defaultValue="INR"
+    >
+      <option value="INR">₹ INR</option>
+      <option value="USD">$ USD</option>
+      <option value="EUR">€ EUR</option>
+      <option value="GBP">£ GBP</option>
+      <option value="AED">AED</option>
+    </select>
+
+    {/* Budget Input */}
+    <Input
+      id="budget"
+      name="budget"
+      placeholder="e.g., 10,000 - 25,000"
+      className="h-12 flex-1"
+    />
+  </div>
+</div>
+
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Project Details</Label>
