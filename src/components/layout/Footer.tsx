@@ -153,6 +153,74 @@ export const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
+      {/* Client Served Marquee */}
+<div
+  className="border-t border-primary-foreground/10 py-10 overflow-hidden"
+  style={{
+    background:
+      "linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 60%) 100%)",
+  }}
+>
+  <div style={{ width: "100%", overflow: "hidden" }}>
+    <div
+      style={{
+        display: "flex",
+        width: "max-content",
+        gap: clientMarqueeSettings.gap,
+        animation: `marquee ${clientMarqueeSettings.speed}s linear infinite`,
+        animationDirection:
+          clientMarqueeSettings.direction === "right" ? "reverse" : "normal",
+      }}
+      onMouseEnter={(e) =>
+        (e.currentTarget.style.animationPlayState = "paused")
+      }
+      onMouseLeave={(e) =>
+        (e.currentTarget.style.animationPlayState = "running")
+      }
+    >
+      {[...clients, ...clients].map((client, index) => (
+        <div
+          key={index}
+          onClick={() => setActiveClient(client)}
+          style={{
+            flex: "0 0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            minWidth: clientMarqueeSettings.logoSize + 40,
+          }}
+        >
+          <img
+            src={client.logo}
+            alt={client.name || "Client Logo"}
+            style={{
+              width: clientMarqueeSettings.logoSize,
+              height: clientMarqueeSettings.logoSize,
+              objectFit: "contain",
+              opacity: 0.85,
+              transition: "opacity 0.3s ease",
+            }}
+          />
+          {client.name && (
+            <span
+              style={{
+                marginTop: 6,
+                fontSize: 12,
+                opacity: 0.6,
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {client.name}
+            </span>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
       {/* Main Footer */}
       <div className="container-section py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
@@ -277,68 +345,8 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Client Served Marquee */}
-<div className="border-t border-primary-foreground/10 py-10 overflow-hidden">
-  <div style={{ width: "100%", overflow: "hidden" }}>
-    <div
-      style={{
-        display: "flex",
-        width: "max-content",
-        gap: clientMarqueeSettings.gap,
-        animation: `marquee ${clientMarqueeSettings.speed}s linear infinite`,
-        animationDirection:
-          clientMarqueeSettings.direction === "right" ? "reverse" : "normal",
-      }}
-      onMouseEnter={(e) =>
-        (e.currentTarget.style.animationPlayState = "paused")
-      }
-      onMouseLeave={(e) =>
-        (e.currentTarget.style.animationPlayState = "running")
-      }
-    >
-      {[...clients, ...clients].map((client, index) => (
-        <div
-          key={index}
-          onClick={() => setActiveClient(client)}
-          style={{
-            flex: "0 0 auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            minWidth: clientMarqueeSettings.logoSize + 40,
-          }}
-        >
-          <img
-            src={client.logo}
-            alt={client.name || "Client Logo"}
-            style={{
-              width: clientMarqueeSettings.logoSize,
-              height: clientMarqueeSettings.logoSize,
-              objectFit: "contain",
-              opacity: 0.85,
-              transition: "opacity 0.3s ease",
-            }}
-          />
-          {client.name && (
-            <span
-              style={{
-                marginTop: 6,
-                fontSize: 12,
-                opacity: 0.6,
-                textAlign: "center",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {client.name}
-            </span>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
+      
+
 
 
       {/* Bottom Bar */}
