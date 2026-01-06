@@ -320,14 +320,14 @@ export const Footer = () => {
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-gold" />
                 <span className="text-primary-foreground/70">
-                  hussainiitservices@gmail.com
+                  info@hussainiitservices.com
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-gold mt-1 shrink-0" />
 
 <ul className="body-regular text-primary-foreground/70 space-y-1">
-  <li>+91 7024951915</li>
+  <li>+91 7648839878</li>
   <li>+91 9156770832</li>
 </ul>
               </li>

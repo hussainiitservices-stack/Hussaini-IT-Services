@@ -48,7 +48,7 @@ export const HeroSection = () => {
 
             <h1 className="heading-display text-primary-foreground mb-6 opacity-0 animate-fade-up animation-delay-100">
               Crafting Digital
-              <span className="block text-gold-light">Excellence</span>
+              <span className="heading-display block text-gold-light">Excellence</span>
             </h1>
 
             <p className="body-large text-primary-foreground/70 mb-10 max-w-xl mx-auto lg:mx-0 opacity-0 animate-fade-up animation-delay-200">
@@ -100,83 +100,94 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="hidden lg:block relative opacity-0 animate-fade-up animation-delay-300">
-            <div className="relative">
-              <div className="glass-card bg-primary-foreground/5 backdrop-blur-xl border-primary-foreground/10 p-8 rounded-2xl">
-                <div className="grid grid-cols-2 gap-6">
-                  {/* Web */}
-                  <div
-                    onClick={() => setActiveModal("web")}
-                    className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
-                  >
-                    <Code className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
-                    <h3 className="font-heading text-lg text-primary-foreground mb-2">
-                      Web Development
-                    </h3>
-                    <p className="text-sm text-primary-foreground/60">
-                      Custom & scalable solutions
-                    </p>
-                  </div>
+{/* Visual Element */}
+<div className="hidden lg:block relative opacity-0 animate-fade-up animation-delay-300">
+  <div className="relative">
+    <div className="glass-card bg-primary-foreground/5 backdrop-blur-xl border-primary-foreground/10 p-8 rounded-2xl">
+      <div className="grid grid-cols-2 gap-6">
 
-                  {/* Mobile */}
-                  <div
-                    onClick={() => setActiveModal("mobile")}
-                    className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
-                  >
-                    <Smartphone className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
-                    <h3 className="font-heading text-lg text-primary-foreground mb-2">
-                      Mobile Apps
-                    </h3>
-                    <p className="text-sm text-primary-foreground/60">
-                      iOS & Android
-                    </p>
-                  </div>
+        {/* Web */}
+        <div
+          onClick={() => setActiveModal("web")}
+          className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
+        >
+          <Code className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
+          <h3 className="font-heading text-lg text-primary-foreground mb-2">
+            Web Development
+          </h3>
+          <p className="text-sm text-primary-foreground/60">
+            Custom & scalable solutions
+          </p>
+        </div>
 
-                  {/* AI */}
-                  <div
-                    onClick={() => setActiveModal("ai")}
-                    className="col-span-2 p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
-                  >
-                    <Brain className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
-                    <h3 className="font-heading text-lg text-primary-foreground mb-2">
-                      AI Integration
-                    </h3>
-                    <p className="text-sm text-primary-foreground/60">
-                      Smart automation, chatbots & intelligent experiences
-                    </p>
-                  </div>
+        {/* Mobile */}
+        <div
+          onClick={() => setActiveModal("mobile")}
+          className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
+        >
+          <Smartphone className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
+          <h3 className="font-heading text-lg text-primary-foreground mb-2">
+            Mobile Apps
+          </h3>
+          <p className="text-sm text-primary-foreground/60">
+            iOS & Android
+          </p>
+        </div>
 
-                  {/* Global */}
-                  <div
-                    onClick={() => setActiveModal("global")}
-                    className="col-span-2 px-6 py-4 rounded-xl bg-gold/10 border border-gold/30 hover:border-gold transition-colors duration-300 group flex items-center gap-4 cursor-pointer"
-                  >
-                    <Globe className="w-8 h-8 text-gold shrink-0" />
-                    <div className="flex items-center gap-3">
-                      <h3 className="font-heading text-lg text-primary-foreground">
-                        Global Reach
-                      </h3>
-                      <span className="text-primary-foreground/40">•</span>
-                      <p className="text-sm text-primary-foreground/60 truncate max-w-[420px]">
-                        Premium digital solutions, delivered globally.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        {/* AI */}
+        <div
+          onClick={() => setActiveModal("ai")}
+          className="p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-gold/50 transition-colors duration-300 group cursor-pointer"
+        >
+          <Brain className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
+          <h3 className="font-heading text-lg text-primary-foreground mb-2">
+            AI Integration
+          </h3>
+          <p className="text-sm text-primary-foreground/60">
+            Smart automation & AI solutions
+          </p>
+        </div>
 
-              {/* Star */}
-              <div
-                onClick={() => setActiveModal("global")}
-                className="absolute -top-6 -right-6 w-20 h-20 rounded-2xl bg-gold/20 backdrop-blur-sm border border-gold/30 flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer"
-              >
-                <span className="font-heading text-2xl text-gold animate-pulse">
-                  ✦
-                </span>
-              </div>
-            </div>
-          </div>
+        {/* Global */}
+        <div
+          onClick={() => setActiveModal("global")}
+          className="p-6 rounded-xl bg-primary-foreground/5 border border-gold/30 hover:border-gold transition-colors duration-300 group cursor-pointer"
+        >
+          <Globe className="w-10 h-10 text-gold mb-4 group-hover:scale-110 transition-transform" />
+          <h3 className="font-heading text-lg text-primary-foreground mb-2">
+            Global Reach
+          </h3>
+          <p className="text-sm text-primary-foreground/60">
+            Premium digital solutions worldwide
+          </p>
+          {/* Clickable Star */}
+{/* Clickable Star – AI Modal */}
+<div
+  onClick={(e) => {
+    e.stopPropagation(); // 🔥 THIS IS THE FIX
+    setActiveModal("ai");
+  }}
+  className="absolute -top-6 -right-6 w-16 h-16 rounded-2xl 
+             bg-gold/20 backdrop-blur-sm border border-gold/30 
+             flex items-center justify-center 
+             animate-float hover:scale-110 transition-transform 
+             cursor-pointer z-10"
+>
+  <span className="font-heading text-xl text-gold animate-pulse">
+    ✦
+  </span>
+</div>
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
 

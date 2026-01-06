@@ -51,12 +51,13 @@ export const Navbar = () => {
             {navItems.map((item) => (
               <Link key={item.path} to={item.path}>
                 <Button
-                  variant="nav"
-                  size="sm"
-                  className={`relative ${
-                    location.pathname === item.path ? "text-accent" : ""
-                  }`}
-                >
+  variant="nav"
+  size="sm"
+  className={`relative text-[15px] font-medium ${
+    location.pathname === item.path ? "text-accent" : ""
+  }`}
+>
+
                   {item.name}
                   {location.pathname === item.path && (
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent" />

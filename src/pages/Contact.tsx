@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hussainiitservices@gmail.com",
+    content: "info@hussainiitservices.com",
     description: "We respond within 24 hours",
   },
   {
