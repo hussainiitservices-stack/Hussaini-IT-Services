@@ -20,12 +20,13 @@ const contactInfo = [
     content: "+91 7024951915 / +91 9156770832",
     description: "Mon-Fri, 9am-6pm EST",
   },
-  // {
-  //   icon: MapPin,
-  //   title: "Location",
-  //   content: "Ujjain,",
-  //   description: "Madhya Pradesh, India",
-  // },
+  {
+  icon: MapPin,
+  title: "Location",
+  content: "303 Talbot Lane,",
+  description: "Sunnyvale, Texas, USA 75182",
+},
+
   {
     icon: Clock,
     title: "Business Hours",

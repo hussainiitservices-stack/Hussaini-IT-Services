@@ -263,6 +263,14 @@ export const Footer = () => {
   <li>+91 9156770832</li>
 </ul>
               </li>
+              <li className="flex items-start gap-3">
+  <MapPin className="w-5 h-5 text-gold mt-0.5" />
+  <span className="body-regular text-primary-foreground/70">
+    303 Talbot Lane, <br />
+    Sunnyvale, Texas, USA 75182
+  </span>
+</li>
+
               
             </ul>
           </div>

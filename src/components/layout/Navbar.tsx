@@ -28,13 +28,12 @@ export const Navbar = () => {
   const showDarkNav = isScrolled || !isHomePage;
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-elegant-sm"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-elegant-sm">
       <div className="container-section">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          
+          {/* Logo – FULL REFRESH ON CLICK */}
+          <a href="/" className="flex items-center gap-2">
             <img
               src="/Logo.png"
               alt="Hussaini IT Logo"
@@ -45,7 +44,7 @@ export const Navbar = () => {
                 opacity-100
               "
             />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
