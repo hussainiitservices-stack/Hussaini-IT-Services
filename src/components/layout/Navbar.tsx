@@ -68,13 +68,18 @@ export const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link to="/contact">
-              <Button variant="gold" size="sm">
-                Get Started
-              </Button>
-            </Link>
-          </div>
+<div className="hidden md:block">
+  <Link to="/contact">
+    <Button
+      variant="gold"
+      size="lg"
+      className="px-3 py-1 text-base"
+    >
+      Get Started
+    </Button>
+  </Link>
+</div>
+
 
           {/* Mobile Menu Button */}
           <button

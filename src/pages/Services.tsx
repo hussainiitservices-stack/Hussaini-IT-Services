@@ -12,6 +12,12 @@ import {
   Check,
 } from "lucide-react";
 
+/**
+ * 👉 media:
+ * - Can be an imgbb URL (https://i.ibb.co/xxx.gif)
+ * - OR local asset (/assets/gifs/web.gif)
+ */
+
 const services = [
   {
     id: "web",
@@ -28,6 +34,7 @@ const services = [
       "Cloud-native deployment strategies",
     ],
     technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
+    media: "https://i.ibb.co/Y73NVFXZ/Whats-App-Video-2026-01-06-at-11-31-00-PM.gif",
   },
   {
     id: "shopify",
@@ -44,6 +51,7 @@ const services = [
       "Conversion rate optimization",
     ],
     technologies: ["Liquid", "Shopify API", "Hydrogen", "JavaScript", "GraphQL"],
+    media: "https://i.ibb.co/7dZHGSJ6/Whats-App-Video-2026-01-06-at-11-31-02-PM.gif",
   },
   {
     id: "webflow",
@@ -60,6 +68,7 @@ const services = [
       "Fast time-to-market",
     ],
     technologies: ["Webflow", "Custom Code", "Integrations", "CMS", "Animations"],
+    media: "https://i.ibb.co/j7bTSc9/responsive.gif",
   },
   {
     id: "wordpress",
@@ -76,6 +85,7 @@ const services = [
       "Security hardening",
     ],
     technologies: ["PHP", "MySQL", "REST API", "Gutenberg", "WooCommerce"],
+    media: "https://i.ibb.co/C5N3xMBK/coding.gif",
   },
   {
     id: "android",
@@ -92,6 +102,7 @@ const services = [
       "Push notifications & analytics",
     ],
     technologies: ["Kotlin", "Java", "Flutter", "React Native", "Firebase"],
+    media: "https://i.ibb.co/nqXzSBhP/Whats-App-Video-2026-01-06-at-11-31-01-PM.gif",
   },
   {
     id: "ios",
@@ -108,6 +119,7 @@ const services = [
       "Push notifications & analytics",
     ],
     technologies: ["Swift", "SwiftUI", "Objective-C", "Xcode", "TestFlight"],
+    media: "https://i.ibb.co/84M8NF9k/apple.gif",
   },
 ];
 
@@ -146,6 +158,7 @@ const Services = () => {
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
+                {/* LEFT CONTENT */}
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-accent" />
@@ -192,13 +205,19 @@ const Services = () => {
                   </Link>
                 </div>
 
+                {/* RIGHT FRAME – GIF ONLY */}
                 <div
                   className={`glass-card p-8 rounded-2xl bg-cream-dark ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
-                  <div className="aspect-video rounded-xl bg-gradient-navy flex items-center justify-center">
-                    <service.icon className="w-24 h-24 text-gold/30" />
+                  <div className="aspect-video rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                    <img
+                      src={service.media}
+                      alt={service.title}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>

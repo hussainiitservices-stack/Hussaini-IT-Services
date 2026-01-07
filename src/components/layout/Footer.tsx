@@ -313,33 +313,52 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6 text-gold-light">
+            <h4 className="font-heading text-lg mb-6 text-gold-light">
               Contact
             </h4>
+
             <ul className="space-y-4">
+              {/* Email */}
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-gold" />
-                <span className="text-primary-foreground/70">
+                <a
+                  href="mailto:info@hussainiitservices.com"
+                  className="hover:text-gold-light"
+                >
                   info@hussainiitservices.com
-                </span>
+                </a>
               </li>
+
+              {/* Phone */}
               <li className="flex gap-3">
-                <Phone className="w-5 h-5 text-gold mt-1 shrink-0" />
-
-<ul className="body-regular text-primary-foreground/70 space-y-1">
-  <li>+91 7648839878</li>
-  <li>+91 9156770832</li>
-</ul>
+                <Phone className="w-5 h-5 text-gold" />
+                <ul className="space-y-1">
+                  <li>
+                    <a href="tel:+917648839878" className="hover:text-gold-light">
+                      +91 7648839878
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+919156770832" className="hover:text-gold-light">
+                      +91 9156770832
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li className="flex items-start gap-3">
-  <MapPin className="w-5 h-5 text-gold mt-0.5" />
-  <span className="body-regular text-primary-foreground/70">
-    303 Talbot Lane, <br />
-    Sunnyvale, Texas, USA 75182
-  </span>
-</li>
 
-              
+              {/* Address */}
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-gold mt-1" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=303+Talbot+Lane+Sunnyvale+Texas+75182"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold-light"
+                >
+                  303 Talbot Lane, <br />
+                  Sunnyvale, Texas, USA 75182
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -356,10 +375,10 @@ export const Footer = () => {
             © {new Date().getFullYear()} Hussaini IT Services. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="text-sm text-primary-foreground/50">
+            <Link to="/privacy-policy" className="text-sm text-primary-foreground/50">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-sm text-primary-foreground/50">
+            <Link to="/terms-and-conditions" className="text-sm text-primary-foreground/50">
               Terms of Service
             </Link>
           </div>

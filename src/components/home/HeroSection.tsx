@@ -191,7 +191,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll */}
+      {/* Scroll
       <button
         onClick={handleScrollDown}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animation-delay-500"
@@ -202,7 +202,7 @@ export const HeroSection = () => {
         <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex justify-center pt-2">
           <div className="w-1.5 h-3 rounded-full bg-gold animate-bounce" />
         </div>
-      </button>
+      </button> */}
 
       {/* MODAL */}
 {activeModal && (
