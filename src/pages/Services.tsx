@@ -34,7 +34,7 @@ const services = [
       "Cloud-native deployment strategies",
     ],
     technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
-    media: "https://i.ibb.co/Q3Rr7FW9/mobile-4.gif",
+    media: "https://i.ibb.co/7JDrHCZG/New-Project-AC4-A160.gif",
   },
   {
     id: "shopify",
@@ -51,7 +51,7 @@ const services = [
       "Conversion rate optimization",
     ],
     technologies: ["Liquid", "Shopify API", "Hydrogen", "JavaScript", "GraphQL"],
-    media: "https://i.ibb.co/BKT4wc3t/mobile-3.gif",
+    media: "https://i.ibb.co/CxdVFLh/New-Project-AD37-BAB.gif",
   },
   {
     id: "webflow",
@@ -68,7 +68,7 @@ const services = [
       "Fast time-to-market",
     ],
     technologies: ["Webflow", "Custom Code", "Integrations", "CMS", "Animations"],
-    media: "https://i.ibb.co/qL4gWbdW/3-apple-2.gif",
+    media: "https://i.ibb.co/8DtpQwvc/New-Project-446079-F.gif",
   },
   {
     id: "wordpress",
@@ -85,7 +85,7 @@ const services = [
       "Security hardening",
     ],
     technologies: ["PHP", "MySQL", "REST API", "Gutenberg", "WooCommerce"],
-    media: "https://i.ibb.co/q3jmy6SL/2-apple-1.gif",
+    media: "https://i.ibb.co/gFwrVQfz/New-Project-9-FC363-F.gif",
   },
   {
     id: "android",
@@ -102,7 +102,7 @@ const services = [
       "Push notifications & analytics",
     ],
     technologies: ["Kotlin", "Java", "Flutter", "React Native", "Firebase"],
-    media: "https://i.ibb.co/Y78h7k6F/mobile-5.gif",
+    media: "https://i.ibb.co/0pRtB6zb/New-Project-AE3998-C.gif",
   },
   {
     id: "ios",
@@ -119,9 +119,10 @@ const services = [
       "Push notifications & analytics",
     ],
     technologies: ["Swift", "SwiftUI", "Objective-C", "Xcode", "TestFlight"],
-    media: "https://i.ibb.co/84BQky71/1-apple.gif",
+    media: "https://i.ibb.co/G3bgGcLZ/New-Project-73-E8-AD0.gif",
   },
 ];
+
 
 const Services = () => {
   return (
