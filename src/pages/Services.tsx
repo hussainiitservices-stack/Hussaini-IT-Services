@@ -34,7 +34,7 @@ const services = [
       "Cloud-native deployment strategies",
     ],
     technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
-    media: "https://i.ibb.co/7JDrHCZG/New-Project-AC4-A160.gif",
+    media: "https://i.ibb.co/2Y5w818T/a577c4d5-0a32-4040-8361-55f182e0cbeb-7932110.gif",
   },
   {
     id: "shopify",
@@ -85,7 +85,7 @@ const services = [
       "Security hardening",
     ],
     technologies: ["PHP", "MySQL", "REST API", "Gutenberg", "WooCommerce"],
-    media: "https://i.ibb.co/gFwrVQfz/New-Project-9-FC363-F.gif",
+    media: "https://i.ibb.co/DgLMPvQ9/a577c4d5-0a32-4040-8361-55f182e0cbeb-33-E959-B.gif",
   },
   {
     id: "android",
@@ -102,7 +102,7 @@ const services = [
       "Push notifications & analytics",
     ],
     technologies: ["Kotlin", "Java", "Flutter", "React Native", "Firebase"],
-    media: "https://i.ibb.co/0pRtB6zb/New-Project-AE3998-C.gif",
+    media: "https://i.ibb.co/LXN51Pqx/a577c4d5-0a32-4040-8361-55f182e0cbeb-D83-BDDD.gif",
   },
   {
     id: "ios",
