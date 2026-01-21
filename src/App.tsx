@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import { ScrollToTopButton } from "./components/ui/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +23,8 @@ const App = () => (
       <Sonner />
       
       <BrowserRouter>
-      <ScrollToTop />
+      <ScrollToTop/>
+      <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
