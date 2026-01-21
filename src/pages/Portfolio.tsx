@@ -99,7 +99,7 @@ const projects = [
     "ImgBB",
   ],
   image: "bg-white/85 backdrop-blur-md",
-  logo: "https://i.ibb.co/JwfK76Sv/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   website: "https://advancecinematics.com/",
 }
 

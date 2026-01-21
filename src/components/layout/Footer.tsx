@@ -41,6 +41,12 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/YTypYT0q/favicon.png",
   },
+   
+  {
+    name: "",
+    logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  },
+
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -69,6 +75,11 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/YTypYT0q/favicon.png",
   },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  },
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -97,6 +108,11 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/YTypYT0q/favicon.png",
   },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  },
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -124,6 +140,11 @@ const clients = [
   {
     name: "",
     logo: "https://i.ibb.co/YTypYT0q/favicon.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   },
 /* ================================================================================================================================================== */
 ];
