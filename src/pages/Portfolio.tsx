@@ -78,6 +78,31 @@ const projects = [
     logo: "https://i.ibb.co/YTypYT0q/favicon.png",
     website: "https://namak-para.vercel.app/",
   },
+  {
+  id: 7,
+  title: "Portfolio Website – Advance Cinematics",
+  category: "Portfolio",
+  description:
+    "A cinematic and performance-optimized portfolio website built for a Senior Video Editor, Motion Graphics Designer, and Cinematographer. Designed to showcase high-quality visual work with seamless media integration and a premium, professional look.",
+  results: [
+    "Strong personal brand presence with cinematic UI",
+    "Smooth showcase of video work via Vimeo & YouTube",
+    "Fast-loading, responsive portfolio optimized for clients",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Google Drive",
+    "Vimeo",
+    "YouTube",
+    "ImgBB",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/JwfK76Sv/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  website: "https://advancecinematics.com/",
+}
+
 ];
 
 const Portfolio = () => {
