@@ -13,6 +13,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import { ScrollToTopButton } from "./components/ui/ScrollToTopButton";
+import Blog from "./pages/Blog/blogPage";
+import ViewBlog from "@/pages/Blog/ViewBlog";
+import CreateBlog from "@/pages/Blog/CreateBlog";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +36,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/blog" element={<div>Blog Page Coming Soon!</div>} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<ViewBlog />} />
+          <Route path="/blog/create" element={<CreateBlog />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

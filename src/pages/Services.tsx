@@ -10,6 +10,10 @@ import {
   Apple,
   ArrowRight,
   Check,
+  Search,
+  Share2,
+  Video,
+  Palette,
 } from "lucide-react";
 
 /**
@@ -121,7 +125,111 @@ const services = [
     technologies: ["Swift", "SwiftUI", "Objective-C", "Xcode", "TestFlight"],
     media: "https://i.ibb.co/G3bgGcLZ/New-Project-73-E8-AD0.gif",
   },
+  
+  {
+  id: "seo",
+  icon: Search,
+  title: "SEO Enhancement",
+  subtitle: "Visibility That Converts",
+  description:
+    "Boost your website’s search engine rankings with data-driven SEO strategies that improve visibility, attract qualified traffic, and drive long-term organic growth.",
+  benefits: [
+    "On-page & technical SEO optimization",
+    "Keyword research & competitor analysis",
+    "Content optimization for ranking",
+    "Performance & Core Web Vitals improvement",
+    "Local & global SEO strategies",
+  ],
+  technologies: [
+    "Google Search Console",
+    "Google Analytics",
+    "Ahrefs",
+    "SEMrush",
+    "PageSpeed Insights",
+  ],
+  media: "https://i.ibb.co/99LYsPtv/seo-optimization.gif",
+},
+
+{
+  id: "social-media",
+  icon: Share2,
+  title: "Social Media Management",
+  subtitle: "Build. Engage. Grow.",
+  description:
+    "Strengthen your brand presence across social platforms with consistent content, audience engagement, and performance-focused social media strategies.",
+  benefits: [
+    "Content planning & creative posting",
+    "Audience engagement & growth",
+    "Brand voice consistency",
+    "Analytics & performance tracking",
+    "Paid campaign management",
+  ],
+  technologies: [
+    "Meta Business Suite",
+    "Instagram Insights",
+    "Facebook Ads Manager",
+    "Canva",
+    "Hootsuite",
+  ],
+  media: "https://i.ibb.co/4hXfhz0/social-media-marketing.gif",
+},
+
+{
+  id: "video-editing",
+  icon: Video,
+  title: "Video Editing",
+  subtitle: "Scroll-Stopping Visual Stories",
+  description:
+    "Create high-impact video content designed for Instagram Reels, YouTube Shorts, and brand showreels that capture attention, boost engagement, and drive conversions.",
+  benefits: [
+    "Instagram Reels & Shorts editing",
+    "Cinematic transitions & effects",
+    "Color grading & sound design",
+    "Trend-based edits for higher reach",
+    "Brand-aligned storytelling",
+  ],
+  technologies: [
+    "Adobe Premiere Pro",
+    "After Effects",
+    "CapCut",
+    "DaVinci Resolve",
+    "Final Cut Pro",
+  ],
+  media: "https://i.ibb.co/kVd63h0J/video-editing-reels.gif",
+},
+
+{
+  id: "graphic-design",
+  icon: Palette,
+  title: "Graphic Design",
+  subtitle: "Designs That Define Brands",
+  description:
+    "Craft visually compelling designs that build brand identity — from logos and brand kits to marketing creatives that leave a lasting impression.",
+  benefits: [
+    "Logo design & brand identity",
+    "Social media creatives & banners",
+    "Print & digital design assets",
+    "Consistent visual language",
+    "High-resolution export formats",
+  ],
+  technologies: [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Figma",
+    "Canva",
+    "CorelDRAW",
+  ],
+  media: "https://i.ibb.co/gBw9Dbj/graphic-design-branding.gif",
+},
+
+
+
+
+
 ];
+
+
+
 
 
 const Services = () => {
