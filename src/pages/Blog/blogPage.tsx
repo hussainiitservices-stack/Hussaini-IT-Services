@@ -88,12 +88,12 @@ const BlogPage = () => {
               design, and digital growth.
             </p>
             <div className="mt-8">
-              <button
+              {/* <button
                 onClick={() => setShowPasswordPrompt(true)}
                 className="px-6 py-3 rounded-xl bg-accent text-accent-foreground font-medium shadow-elegant-sm hover:shadow-elegant-md transition"
               >
                 Create Blog
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
