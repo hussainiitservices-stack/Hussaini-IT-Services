@@ -356,7 +356,7 @@ export const Footer = () => {
                 <ul className="space-y-1">
                   <li>
                     <a href="tel:+917648839878" className="hover:text-gold-light">
-                      +91 7648839878
+                      +91 7024951915
                     </a>
                   </li>
                   <li>
