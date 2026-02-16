@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Code,
-  ShoppingCart,
-  Layout as LayoutIcon,
-  FileCode,
   Smartphone,
   Apple,
   ArrowRight,
@@ -14,14 +11,35 @@ import {
   Share2,
   Video,
   Palette,
+  ChevronDown,
 } from "lucide-react";
+import { useState } from "react";
 
-/**
- * 👉 media:
- * - Can be an imgbb URL (https://i.ibb.co/xxx.gif)
- * - OR local asset (/assets/gifs/web.gif)
- */
+// ─── Web Dev sub-platforms ───────────────────────────────────────────────────
+const webPlatforms = [
+  {
+    label: "React / Next.js",
+    desc: "Lightning-fast SPAs and SSR apps built with modern React and Next.js architecture.",
+    tags: ["React", "Next.js", "TypeScript", "Node.js"],
+  },
+  {
+    label: "WordPress",
+    desc: "Custom themes, plugin development, WooCommerce stores, and hardened security.",
+    tags: ["PHP", "MySQL", "REST API", "WooCommerce"],
+  },
+  {
+    label: "Webflow",
+    desc: "Pixel-perfect visual builds with advanced CMS, animations, and zero-code flexibility.",
+    tags: ["Webflow", "CMS", "Interactions", "Custom Code"],
+  },
+  {
+    label: "Shopify",
+    desc: "Custom Shopify themes, apps, and store optimization for high-converting e-commerce experiences.",
+    tags: ["Shopify", "Liquid", "JavaScript", "Theme Customization"],
+  },
+];
 
+// ─── All services ─────────────────────────────────────────────────────────────
 const services = [
   {
     id: "web",
@@ -37,59 +55,9 @@ const services = [
       "Secure and maintainable codebase",
       "Cloud-native deployment strategies",
     ],
-    technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
+    technologies: ["React", "Next.js", "Node.js", "TypeScript", "WordPress", "Webflow", "PostgreSQL", "AWS"],
     media: "https://i.ibb.co/2Y5w818T/a577c4d5-0a32-4040-8361-55f182e0cbeb-7932110.gif",
-  },
-  {
-    id: "shopify",
-    icon: ShoppingCart,
-    title: "Shopify Development",
-    subtitle: "E-Commerce Excellence",
-    description:
-      "Transform your online store with custom Shopify themes, powerful apps, and seamless integrations that drive conversions and enhance customer experience.",
-    benefits: [
-      "Custom theme development",
-      "Shopify app creation",
-      "Third-party integrations",
-      "Performance optimization",
-      "Conversion rate optimization",
-    ],
-    technologies: ["Liquid", "Shopify API", "Hydrogen", "JavaScript", "GraphQL"],
-    media: "https://i.ibb.co/CxdVFLh/New-Project-AD37-BAB.gif",
-  },
-  {
-    id: "webflow",
-    icon: LayoutIcon,
-    title: "Webflow Development",
-    subtitle: "No-Code, Pro Results",
-    description:
-      "Create stunning, responsive websites with Webflow's powerful visual development platform. Perfect for marketing sites, portfolios, and content-driven platforms.",
-    benefits: [
-      "Pixel-perfect responsive design",
-      "Advanced CMS capabilities",
-      "Custom interactions & animations",
-      "Easy content management",
-      "Fast time-to-market",
-    ],
-    technologies: ["Webflow", "Custom Code", "Integrations", "CMS", "Animations"],
-    media: "https://i.ibb.co/8DtpQwvc/New-Project-446079-F.gif",
-  },
-  {
-    id: "wordpress",
-    icon: FileCode,
-    title: "WordPress Development",
-    subtitle: "Robust & Flexible",
-    description:
-      "Leverage the world's most popular CMS with custom themes, plugins, and optimized configurations that give you full control over your content.",
-    benefits: [
-      "Custom theme development",
-      "Plugin development & customization",
-      "WooCommerce solutions",
-      "Multisite setups",
-      "Security hardening",
-    ],
-    technologies: ["PHP", "MySQL", "REST API", "Gutenberg", "WooCommerce"],
-    media: "https://i.ibb.co/DgLMPvQ9/a577c4d5-0a32-4040-8361-55f182e0cbeb-33-E959-B.gif",
+    hasWebPlatforms: true,
   },
   {
     id: "android",
@@ -125,113 +93,223 @@ const services = [
     technologies: ["Swift", "SwiftUI", "Objective-C", "Xcode", "TestFlight"],
     media: "https://i.ibb.co/G3bgGcLZ/New-Project-73-E8-AD0.gif",
   },
-  
   {
-  id: "seo",
-  icon: Search,
-  title: "SEO Enhancement",
-  subtitle: "Visibility That Converts",
-  description:
-    "Boost your website’s search engine rankings with data-driven SEO strategies that improve visibility, attract qualified traffic, and drive long-term organic growth.",
-  benefits: [
-    "On-page & technical SEO optimization",
-    "Keyword research & competitor analysis",
-    "Content optimization for ranking",
-    "Performance & Core Web Vitals improvement",
-    "Local & global SEO strategies",
-  ],
-  technologies: [
-    "Google Search Console",
-    "Google Analytics",
-    "Ahrefs",
-    "SEMrush",
-    "PageSpeed Insights",
-  ],
-  media: "https://i.ibb.co/99LYsPtv/seo-optimization.gif",
-},
-
-{
-  id: "social-media",
-  icon: Share2,
-  title: "Social Media Management",
-  subtitle: "Build. Engage. Grow.",
-  description:
-    "Strengthen your brand presence across social platforms with consistent content, audience engagement, and performance-focused social media strategies.",
-  benefits: [
-    "Content planning & creative posting",
-    "Audience engagement & growth",
-    "Brand voice consistency",
-    "Analytics & performance tracking",
-    "Paid campaign management",
-  ],
-  technologies: [
-    "Meta Business Suite",
-    "Instagram Insights",
-    "Facebook Ads Manager",
-    "Canva",
-    "Hootsuite",
-  ],
-  media: "https://i.ibb.co/4hXfhz0/social-media-marketing.gif",
-},
-
-{
-  id: "video-editing",
-  icon: Video,
-  title: "Video Editing",
-  subtitle: "Scroll-Stopping Visual Stories",
-  description:
-    "Create high-impact video content designed for Instagram Reels, YouTube Shorts, and brand showreels that capture attention, boost engagement, and drive conversions.",
-  benefits: [
-    "Instagram Reels & Shorts editing",
-    "Cinematic transitions & effects",
-    "Color grading & sound design",
-    "Trend-based edits for higher reach",
-    "Brand-aligned storytelling",
-  ],
-  technologies: [
-    "Adobe Premiere Pro",
-    "After Effects",
-    "CapCut",
-    "DaVinci Resolve",
-    "Final Cut Pro",
-  ],
-  media: "https://i.ibb.co/kVd63h0J/video-editing-reels.gif",
-},
-
-{
-  id: "graphic-design",
-  icon: Palette,
-  title: "Graphic Design",
-  subtitle: "Designs That Define Brands",
-  description:
-    "Craft visually compelling designs that build brand identity — from logos and brand kits to marketing creatives that leave a lasting impression.",
-  benefits: [
-    "Logo design & brand identity",
-    "Social media creatives & banners",
-    "Print & digital design assets",
-    "Consistent visual language",
-    "High-resolution export formats",
-  ],
-  technologies: [
-    "Adobe Illustrator",
-    "Adobe Photoshop",
-    "Figma",
-    "Canva",
-    "CorelDRAW",
-  ],
-  media: "https://i.ibb.co/gBw9Dbj/graphic-design-branding.gif",
-},
-
-
-
-
-
+    id: "seo",
+    icon: Search,
+    title: "SEO Enhancement",
+    subtitle: "Visibility That Converts",
+    description:
+      "Boost your website's search engine rankings with data-driven SEO strategies that improve visibility, attract qualified traffic, and drive long-term organic growth.",
+    benefits: [
+      "On-page & technical SEO optimization",
+      "Keyword research & competitor analysis",
+      "Content optimization for ranking",
+      "Performance & Core Web Vitals improvement",
+      "Local & global SEO strategies",
+    ],
+    technologies: ["Google Search Console", "Google Analytics", "Ahrefs", "SEMrush", "PageSpeed Insights"],
+    media: "https://i.ibb.co/99LYsPtv/seo-optimization.gif",
+  },
+  {
+    id: "social-media",
+    icon: Share2,
+    title: "Social Media Management",
+    subtitle: "Build. Engage. Grow.",
+    description:
+      "Strengthen your brand presence across social platforms with consistent content, audience engagement, and performance-focused social media strategies.",
+    benefits: [
+      "Content planning & creative posting",
+      "Audience engagement & growth",
+      "Brand voice consistency",
+      "Analytics & performance tracking",
+      "Paid campaign management",
+    ],
+    technologies: ["Meta Business Suite", "Instagram Insights", "Facebook Ads Manager", "Canva", "Hootsuite"],
+    media: "https://i.ibb.co/4hXfhz0/social-media-marketing.gif",
+  },
+  {
+    id: "video-editing",
+    icon: Video,
+    title: "Video Editing",
+    subtitle: "Scroll-Stopping Visual Stories",
+    description:
+      "Create high-impact video content designed for Instagram Reels, YouTube Shorts, and brand showreels that capture attention, boost engagement, and drive conversions.",
+    benefits: [
+      "Instagram Reels & Shorts editing",
+      "Cinematic transitions & effects",
+      "Color grading & sound design",
+      "Trend-based edits for higher reach",
+      "Brand-aligned storytelling",
+    ],
+    technologies: ["Adobe Premiere Pro", "After Effects", "CapCut", "DaVinci Resolve", "Final Cut Pro"],
+    media: "https://i.ibb.co/kVd63h0J/video-editing-reels.gif",
+  },
+  {
+    id: "graphic-design",
+    icon: Palette,
+    title: "Graphic Design",
+    subtitle: "Designs That Define Brands",
+    description:
+      "Craft visually compelling designs that build brand identity — from logos and brand kits to marketing creatives that leave a lasting impression.",
+    benefits: [
+      "Logo design & brand identity",
+      "Social media creatives & banners",
+      "Print & digital design assets",
+      "Consistent visual language",
+      "High-resolution export formats",
+    ],
+    technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma", "Canva", "CorelDRAW"],
+    media: "https://i.ibb.co/gBw9Dbj/graphic-design-branding.gif",
+  },
 ];
 
+// ─── Platform Accordion ───────────────────────────────────────────────────────
+const PlatformAccordion = () => {
+  const [open, setOpen] = useState<number | null>(0);
 
+  return (
+    <div
+      style={{
+        marginTop: "2rem",
+        marginBottom: "2rem",
+        borderRadius: "16px",
+        border: "1px solid rgba(201,168,76,0.18)",
+        overflow: "hidden",
+        background: "rgba(201,168,76,0.03)",
+      }}
+    >
+      {/* Header pill */}
+      <div
+        style={{
+          padding: "10px 18px",
+          borderBottom: "1px solid rgba(201,168,76,0.12)",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+        }}
+      >
+        <span
+          style={{
+            width: 7,
+            height: 7,
+            borderRadius: "50%",
+            background: "var(--accent, #c9a84c)",
+            display: "inline-block",
+            flexShrink: 0,
+          }}
+        />
+        <span
+          style={{
+            fontSize: "0.68rem",
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+            color: "var(--accent, #c9a84c)",
+            fontWeight: 700,
+          }}
+        >
+          Platforms we build on
+        </span>
+      </div>
 
+      {/* Rows */}
+      {webPlatforms.map((p, i) => (
+        <div
+          key={p.label}
+          style={{
+            borderBottom:
+              i < webPlatforms.length - 1
+                ? "1px solid rgba(201,168,76,0.10)"
+                : "none",
+          }}
+        >
+          {/* Trigger */}
+          <button
+            onClick={() => setOpen(open === i ? null : i)}
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "13px 18px",
+              background: open === i ? "rgba(201,168,76,0.06)" : "transparent",
+              border: "none",
+              cursor: "pointer",
+              transition: "background 0.2s",
+              textAlign: "left",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "0.9rem",
+                fontWeight: 600,
+                color:
+                  open === i
+                    ? "var(--accent, #c9a84c)"
+                    : "var(--foreground)",
+                transition: "color 0.2s",
+              }}
+            >
+              {p.label}
+            </span>
+            <ChevronDown
+              style={{
+                width: 15,
+                height: 15,
+                color: "var(--accent, #c9a84c)",
+                transition: "transform 0.3s cubic-bezier(0.4,0,0.2,1)",
+                transform: open === i ? "rotate(180deg)" : "rotate(0deg)",
+                flexShrink: 0,
+                marginLeft: 8,
+              }}
+            />
+          </button>
 
+          {/* Expandable content */}
+          <div
+            style={{
+              maxHeight: open === i ? 160 : 0,
+              overflow: "hidden",
+              transition: "max-height 0.35s cubic-bezier(0.4,0,0.2,1)",
+            }}
+          >
+            <div style={{ padding: "0 18px 14px" }}>
+              <p
+                style={{
+                  fontSize: "0.83rem",
+                  color: "var(--muted-foreground)",
+                  marginBottom: 10,
+                  lineHeight: 1.65,
+                }}
+              >
+                {p.desc}
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                {p.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    style={{
+                      fontSize: "0.7rem",
+                      padding: "3px 10px",
+                      borderRadius: 999,
+                      background: "rgba(201,168,76,0.10)",
+                      color: "var(--accent, #c9a84c)",
+                      letterSpacing: "0.04em",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
+// ─── Main Page ────────────────────────────────────────────────────────────────
 const Services = () => {
   return (
     <Layout>
@@ -282,6 +360,9 @@ const Services = () => {
                   <p className="body-large text-muted-foreground mb-8">
                     {service.description}
                   </p>
+
+                  {/* ── Platform accordion — Web Dev only ── */}
+                  {service.hasWebPlatforms && <PlatformAccordion />}
 
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit) => (
