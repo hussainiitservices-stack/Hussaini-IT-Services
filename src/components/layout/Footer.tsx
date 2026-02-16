@@ -356,7 +356,7 @@ export const Footer = () => {
                 <ul className="space-y-1">
                   <li>
                     <a href="tel:+917648839878" className="hover:text-gold-light">
-                      +91 7648839878
+                      +91 7024951915
                     </a>
                   </li>
                   <li>
@@ -371,13 +371,13 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-1" />
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=303+Talbot+Lane+Sunnyvale+Texas+75182"
+                  href="https://maps.app.goo.gl/qJMvibnfPYVS2h2PA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gold-light"
                 >
-                  303 Talbot Lane, <br />
-                  Sunnyvale, Texas, USA 75182
+                  Kamri marg, <br />
+                  ujjain M.P 456006
                 </a>
               </li>
             </ul>
