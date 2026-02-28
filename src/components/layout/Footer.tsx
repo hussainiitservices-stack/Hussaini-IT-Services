@@ -47,6 +47,26 @@ const clients = [
     logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   },
 
+  {
+    name: "",
+    logo: "https://i.ibb.co/S4NhWJd6/Logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/ZkyXf3g/Aadtra-logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTYMFwzZ/gulfpole-logofinal.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
+  },
+
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -80,6 +100,26 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/S4NhWJd6/Logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/ZkyXf3g/Aadtra-logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTYMFwzZ/gulfpole-logofinal.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
+  },
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -113,6 +153,26 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/S4NhWJd6/Logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/ZkyXf3g/Aadtra-logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTYMFwzZ/gulfpole-logofinal.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
+  },
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -145,6 +205,26 @@ const clients = [
   {
     name: "",
     logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/S4NhWJd6/Logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/ZkyXf3g/Aadtra-logo.png",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/YTYMFwzZ/gulfpole-logofinal.jpg",
+  },
+
+  {
+    name: "",
+    logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   },
 /* ================================================================================================================================================== */
 ];

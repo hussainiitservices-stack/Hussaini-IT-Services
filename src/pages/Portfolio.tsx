@@ -48,6 +48,7 @@ const projects = [
     technologies: ["Webflow", "Custom Code", "Product Analysing"],
     image: "bg-white/85 backdrop-blur-md",
     logo: "https://i.ibb.co/HDvZKLPG/big-logo-scaled-1-3.png",
+    website: "https://safinatgroup.com/",
   },
   {
     id: 5,
@@ -101,6 +102,94 @@ const projects = [
   image: "bg-white/85 backdrop-blur-md",
   logo: "https://i.ibb.co/FkMvKzfR/Gemini-Generated-Image-3vghq83vghq83vgh.png",
   website: "https://advancecinematics.com/",
+},
+{
+  id: 8,
+  title: "Business Website – Saifuddin and Sons Homestay",
+  category: "Hospitality",
+  description:
+    "A modern, conversion-focused homestay website developed for Saifuddin and Sons Homestay in Ujjain, located near the Mahakal Temple. Designed to highlight comfortable rooms, amenities, prime location advantages, and seamless booking inquiries with a clean, trustworthy, and welcoming interface.",
+  results: [
+    "Strong online presence for Mahakal Temple visitors",
+    "Clear showcase of rooms, amenities, and location benefits",
+    "Fast-loading, mobile-responsive website optimized for direct inquiries",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Google Drive",
+    "ImgBB",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/S4NhWJd6/Logo.png",
+  website: "https://www.saifuddinandsonshomestay.in/",
+},
+{
+  id: 9,
+  title: "Social Media Management – AADTRA",
+  category: "Digital Marketing",
+  description:
+    "Strategic social media management for AADTRA, focusing on building a strong industrial brand presence across LinkedIn and other digital platforms. Content strategy centered around engineering excellence, product showcases, industry insights, and B2B credibility to attract decision-makers in Oil & Gas, Power, and Infrastructure sectors.",
+  results: [
+    "Consistent LinkedIn authority building in industrial sector",
+    "Professional product and project showcase posts",
+    "Increased engagement from B2B clients and industry professionals",
+  ],
+  technologies: [
+    "LinkedIn Marketing",
+    "Content Strategy",
+    "Canva",
+    "Meta Business Suite",
+    "Analytics & Insights",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/ZkyXf3g/Aadtra-logo.png",
+  website: "https://aadtra.com/",
+},
+{
+  id: 10,
+  title: "Social Media Management – Gulfpole",
+  category: "Digital Marketing",
+  description:
+    "Complete social media handling for Gulfpole, positioning the brand as a trusted manufacturer of poles and structural solutions. Focused on LinkedIn B2B growth, industrial awareness posts, manufacturing highlights, and infrastructure project visibility to strengthen market authority across GCC and international sectors.",
+  results: [
+    "Enhanced industrial brand credibility",
+    "Structured LinkedIn content strategy for B2B reach",
+    "Increased visibility among contractors and infrastructure companies",
+  ],
+  technologies: [
+    "LinkedIn Marketing",
+    "Content Planning",
+    "Graphic Design",
+    "Meta Ads",
+    "Performance Tracking",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/YTYMFwzZ/gulfpole-logofinal.jpg",
+  website: "https://gulfpole.com/",
+},
+{
+  id: 11,
+  title: "Social Media Management – Airprome",
+  category: "Digital Marketing",
+  description:
+    "End-to-end social media strategy for Airprome, highlighting HVAC, air movement, and industrial ventilation solutions. Focused on educating the market, showcasing technical expertise, and building authority across LinkedIn and other platforms to attract contractors, consultants, and industrial buyers.",
+  results: [
+    "Stronger B2B brand positioning in HVAC sector",
+    "Educational and technical awareness content",
+    "Improved engagement from industry professionals and project managers",
+  ],
+  technologies: [
+    "LinkedIn Marketing",
+    "Content Strategy",
+    "Brand Positioning",
+    "Meta Platforms",
+    "Analytics & Reporting",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
+  website: "https://airprome.com/",
 }
 
 ];
