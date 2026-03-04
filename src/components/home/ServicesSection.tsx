@@ -19,30 +19,30 @@ const services = [
     features: ["React & Next.js", "Node.js Backend", "Cloud Infrastructure"],
     link: "/services#web",
   },
-  {
-    icon: ShoppingCart,
-    title: "Shopify Development",
-    description:
-      "Complete e-commerce solutions with custom themes, apps, and seamless integrations.",
-    features: ["Custom Themes", "App Development", "Store Optimization"],
-    link: "/services#shopify",
-  },
-  {
-    icon: Layout,
-    title: "Webflow Development",
-    description:
-      "Pixel-perfect, responsive websites with powerful CMS capabilities and animations.",
-    features: ["No-Code CMS", "Custom Interactions", "SEO Optimized"],
-    link: "/services#webflow",
-  },
-  {
-    icon: FileCode,
-    title: "WordPress Development",
-    description:
-      "Robust WordPress solutions from custom themes to complex plugin development.",
-    features: ["Custom Themes", "Plugin Development", "WooCommerce"],
-    link: "/services#wordpress",
-  },
+  // {
+  //   icon: ShoppingCart,
+  //   title: "Shopify Development",
+  //   description:
+  //     "Complete e-commerce solutions with custom themes, apps, and seamless integrations.",
+  //   features: ["Custom Themes", "App Development", "Store Optimization"],
+  //   link: "/services#shopify",
+  // },
+  // {
+  //   icon: Layout,
+  //   title: "Webflow Development",
+  //   description:
+  //     "Pixel-perfect, responsive websites with powerful CMS capabilities and animations.",
+  //   features: ["No-Code CMS", "Custom Interactions", "SEO Optimized"],
+  //   link: "/services#webflow",
+  // },
+  // {
+  //   icon: FileCode,
+  //   title: "WordPress Development",
+  //   description:
+  //     "Robust WordPress solutions from custom themes to complex plugin development.",
+  //   features: ["Custom Themes", "Plugin Development", "WooCommerce"],
+  //   link: "/services#wordpress",
+  // },
   {
     icon: Smartphone,
     title: "Android Apps",
