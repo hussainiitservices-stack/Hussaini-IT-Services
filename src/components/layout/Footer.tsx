@@ -66,6 +66,19 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   },
+  {
+  name: "",
+  logo: "https://i.ibb.co/Y4ZTP1yp/Whats-App-Image-2026-04-07-at-4-17-09-PM.jpg",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/c5ptnXg/LOGO.png",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
+},
+
 
 /* ================================================================================================================================================== */
   {
@@ -120,6 +133,18 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   },
+  {
+  name: "",
+  logo: "https://i.ibb.co/Y4ZTP1yp/Whats-App-Image-2026-04-07-at-4-17-09-PM.jpg",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/c5ptnXg/LOGO.png",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
+},
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -173,6 +198,18 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   },
+  {
+  name: "",
+  logo: "https://i.ibb.co/Y4ZTP1yp/Whats-App-Image-2026-04-07-at-4-17-09-PM.jpg",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/c5ptnXg/LOGO.png",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
+},
 /* ================================================================================================================================================== */
   {
     name: "",
@@ -226,6 +263,18 @@ const clients = [
     name: "",
     logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   },
+  {
+  name: "",
+  logo: "https://i.ibb.co/Y4ZTP1yp/Whats-App-Image-2026-04-07-at-4-17-09-PM.jpg",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/c5ptnXg/LOGO.png",
+},
+{
+  name: "",
+  logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
+},
 /* ================================================================================================================================================== */
 ];
 

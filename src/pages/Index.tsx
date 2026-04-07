@@ -5,10 +5,12 @@ import {
   WhyChooseUs,
   CTASection,
 } from "@/components/home";
+import EidImageModal from "@/components/EidImageModal";
 
 const Index = () => {
   return (
     <Layout>
+      {/* <EidImageModal /> ✅ ADD HERE */}
       <HeroSection />
       <ServicesSection />
       <WhyChooseUs />

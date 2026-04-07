@@ -190,7 +190,73 @@ const projects = [
   image: "bg-white/85 backdrop-blur-md",
   logo: "https://i.ibb.co/67qsKXpB/airpro-logo.jpg",
   website: "https://airprome.com/",
-}
+},
+{
+  id: 12,
+  title: "Website Development – Badshah Property",
+  category: "Web Development",
+  description:
+    "Developed a modern real estate website for Badshah Property, focused on showcasing property listings, improving user experience, and generating high-quality leads. The platform is optimized for local SEO and designed to build trust among buyers and sellers.",
+  results: [
+    "Professional online presence for real estate business",
+    "Improved lead generation through optimized UI/UX",
+    "Better local SEO visibility for property searches",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Google Drive",
+    "ImgBB",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/Y4ZTP1yp/Whats-App-Image-2026-04-07-at-4-17-09-PM.jpg",
+  website: "https://www.badshahproperty.in/",
+},
+{
+  id: 13,
+  title: "Website Development – 84 Mahadev Tours & Travels",
+  category: "Web Development",
+  description:
+    "Built a complete travel and taxi booking platform for 84 Mahadev Tours & Travels, including dedicated taxi service functionality. The website is designed for fast bookings, clear service presentation, and strong local SEO targeting Ujjain यात्रियों and tourists.",
+  results: [
+    "Integrated taxi and travel booking experience",
+    "Increased customer inquiries and direct bookings",
+    "Improved visibility for Ujjain taxi and tour searches",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Google Drive",
+    "ImgBB",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/c5ptnXg/LOGO.png",
+  website: "https://www.84mahadevtravels.com/",
+},
+{
+  id: 14,
+  title: "Social Media Management – Saifuddin & Sons",
+  category: "Digital Marketing",
+  description:
+    "Managed end-to-end social media strategy for Saifuddin & Sons, focusing on building a strong brand presence in the metal and coating industry. Created engaging content to showcase products, highlight finishing quality, and attract B2B clients through consistent posting and targeted messaging.",
+  results: [
+    "Stronger brand visibility in metal and coating industry",
+    "Consistent engagement through product-focused content",
+    "Improved inquiries from contractors and business clients",
+  ],
+  technologies: [
+    "Content Strategy",
+    "Instagram Marketing",
+    "Facebook Marketing",
+    "Brand Positioning",
+    "Analytics & Reporting",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
+  website: "",
+},
 
 ];
 
