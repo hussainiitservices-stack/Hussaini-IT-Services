@@ -257,6 +257,28 @@ const projects = [
   logo: "https://i.ibb.co/8L9dSBLQ/SAIFUDDIN-1.png",
   website: "",
 },
+{
+  id: 15,
+  title: "Website Development – Mahakal Bike Rental Service",
+  category: "Web Development",
+  description:
+    "Built a complete bike rental booking platform for Mahakal Bike Rental Service in Ujjain, designed for tourists and pilgrims visiting Mahakal. The website focuses on quick bookings, easy bike selection, and strong local SEO targeting Ujjain यात्रियों and travelers.",
+  results: [
+    "Seamless bike rental booking experience",
+    "Increased direct inquiries and rental bookings",
+    "Improved visibility for Ujjain bike rental and tourist searches",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Google Drive",
+    "ImgBB",
+  ],
+  image: "bg-white/85 backdrop-blur-md",
+  logo: "https://i.ibb.co/BKG3XFLK/1-logo.png",
+  website: "https://www.bikerentservicesinujjain.in/",
+},
 
 ];
 
